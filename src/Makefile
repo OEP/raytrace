@@ -3,9 +3,9 @@ CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=-lglut -lGL -lGLU -lpng
 
-SOURCES=raytrace.cpp
+SOURCES=raytrace.cpp Sphere.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
-EXECUTABLE=raytrace
+EXECUTABLE=../raytrace
 
 all: $(SOURCES) $(EXECUTABLE)
 
