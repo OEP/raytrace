@@ -3,7 +3,7 @@ CC=g++
 CFLAGS=-c -Wall
 LDFLAGS=-lglut -lGL -lGLU -lpng
 
-SOURCES=raytrace.cpp Sphere.cpp
+SOURCES=raytrace.cpp Sphere.cpp SceneManager.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=../raytrace
 
