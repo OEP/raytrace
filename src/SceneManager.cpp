@@ -78,9 +78,16 @@ void SceneManager::render(const char *filename)
 	{
 		for(size_t x = 0; x < image.get_width(); x++)
 		{
-			image[y][x] = png::rgb_pixel(x,0,0);
+			png::rgb_pixel color;
+			computeColor(x, y, color);
+			image[y][x] = color;
 		}
 	}
 
 	image.write(filename);
+}
+
+void SceneManager::computeColor(int x, int y, png::rgb_pixel &color)
+{
+	color = png::rgb_pixel(x, 0, 0);
 }

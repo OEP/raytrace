@@ -3,6 +3,8 @@
 
 #include <vector>
 
+#include <png++/png.hpp>
+
 #include "Sphere.h"
 #include "vector3.h"
 
@@ -16,6 +18,7 @@ class SceneManager
 		vector3 m_CameraPosition;
 		
 		void resyncCameraBacking();
+		void computeColor(int, int, png::rgb_pixel&);
 		
 	protected:
 	public:
