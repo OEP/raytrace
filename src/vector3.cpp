@@ -1,3 +1,4 @@
+#include "math.h"
 #include "vector3.h"
 
 
@@ -26,4 +27,15 @@ double vector3::getY()
 double vector3::getZ()
 {
 	return m_Z;
+}
+
+double vector3::magnitude()
+{
+	return sqrt( m_X*m_X + m_Y*m_Y + m_Z*m_Z);
+}
+
+vector3 vector3::normalize()
+{
+	double mag = magnitude();
+	return vector3(m_X/mag, m_Y/mag, m_Z/mag);	
 }

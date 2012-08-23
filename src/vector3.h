@@ -1,4 +1,5 @@
-
+#ifndef VECTOR3_H_
+#define VECTOR3_H_
 
 class vector3
 {
@@ -10,8 +11,11 @@ class vector3
 	public:
 		vector3();
 		vector3(double,double,double);
-
 		double getX();
 		double getY();
 		double getZ();
+		double magnitude();
+
+		vector3 normalize();
 };
+#endif
