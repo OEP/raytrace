@@ -10,5 +10,9 @@ int main(int argc, char **argv)
 {
 	SceneManager mgr;
 
+	mgr.setViewport(0, 0, 640, 480);
+
 	mgr.addSphere(.0,.0,.0,1.0);
+
+	mgr.render("scene.png");
 }

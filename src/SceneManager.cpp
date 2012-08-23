@@ -24,3 +24,15 @@ SceneManager::addSphere(double x, double y, double z, double r)
 	Sphere *p = new Sphere(x,y,z,r);
 	m_Spheres.push_back(p);
 }
+
+void
+SceneManager::setViewport(int x, int y, int width, int height)
+{
+	m_ViewportPosition = vector3(x,y,0);
+	
+}
+
+void SceneManager::render(const char *filename)
+{
+	// TODO
+}
