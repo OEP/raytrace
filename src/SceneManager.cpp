@@ -89,5 +89,25 @@ void SceneManager::render(const char *filename)
 
 void SceneManager::computeColor(int x, int y, png::rgb_pixel &color)
 {
+	int width = m_Viewport.getX();
+	int height = m_Viewport.getY();
+
+	double planeWidth = m_ProjectionSize.getX();
+	double planeHeight = m_ProjectionSize.getY();
+	double planeX = m_ProjectionPosition.getX();
+	double planeY = m_ProjectionPosition.getY();
+
+	// First find the position of (x,y) in world space.
+	vector3 pixel = vector3(
+		planeX + (x * planeWidth) / width,
+		planeY + (y * planeHeight) / height,
+		m_ProjectionPosition.getZ()
+	);
+	
+	// Create a ray drawn from camera to pixel.
+		
+
+
+
 	color = png::rgb_pixel(x, 0, 0);
 }

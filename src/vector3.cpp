@@ -39,3 +39,22 @@ vector3 vector3::normalize()
 	double mag = magnitude();
 	return vector3(m_X/mag, m_Y/mag, m_Z/mag);	
 }
+
+vector3 vector3::operator+(vector3 other)
+{
+	return vector3(m_X + other.getX(),
+		m_Y + other.getY(),
+		m_Z + other.getZ());
+}
+
+vector3 vector3::operator-(vector3 other)
+{
+	return vector3(m_X - other.getX(),
+		m_Y - other.getY(),
+		m_Z - other.getZ());
+}
+
+double vector3::operator*(vector3 other)
+{
+	return m_X * other.getX() + m_Y * other.getY() + m_Z + other.getZ();
+}

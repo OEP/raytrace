@@ -17,5 +17,9 @@ class vector3
 		double magnitude();
 
 		vector3 normalize();
+
+		vector3 operator+(vector3);
+		vector3 operator-(vector3);
+		double operator*(vector3);
 };
 #endif
