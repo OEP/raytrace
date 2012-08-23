@@ -10,8 +10,10 @@ class SceneManager
 {
 	private:
 		std::vector<Sphere*> m_Spheres;
-		vector3 m_ViewportPosition;
-		vector3 m_ViewportWidth;
+		vector3 m_Viewport;
+		vector3 m_ProjectionPosition;
+		vector3 m_ProjectionSize;
+		vector3 m_CameraPosition;
 		
 
 		
@@ -21,8 +23,10 @@ class SceneManager
 		~SceneManager();
 
 		void addSphere(double x, double y, double z, double r);
-		void setViewport(int, int, int, int);
+		void setViewport(int, int);
+		void setProjectionPlane(double,double,double,double);
 		void render(const char*);
+		void setCameraBacking(double);
 };
 
 #endif

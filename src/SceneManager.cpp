@@ -5,7 +5,8 @@
 
 SceneManager::SceneManager()
 {
-	// Nothing to do.
+	setViewport(640,480);
+	setProjectionPlane(0,0,1.0,0.75);
 }
 
 SceneManager::~SceneManager()
@@ -26,10 +27,16 @@ SceneManager::addSphere(double x, double y, double z, double r)
 }
 
 void
-SceneManager::setViewport(int x, int y, int width, int height)
+SceneManager::setViewport(int width, int height)
 {
-	m_ViewportPosition = vector3(x,y,0);
-	
+	m_Viewport = vector3(width, height, 0);
+}
+
+void
+SceneManager::setProjectionPlane(double x, double y, double w, double h)
+{
+	m_ProjectionPosition = vector3(x,y,0);
+	m_ProjectionSize = vector3(w,h,0);	
 }
 
 void SceneManager::render(const char *filename)
