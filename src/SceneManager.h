@@ -15,7 +15,7 @@ class SceneManager
 		vector3 m_ProjectionSize;
 		vector3 m_CameraPosition;
 		
-
+		void resyncCameraBacking();
 		
 	protected:
 	public:
